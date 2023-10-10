@@ -32,7 +32,39 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.link-button {
+  margin-top: 20px;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bar {
+  margin: auto;
+  width: 100px;
+  background-color: lightgray;
+  border-radius: 10px;
+
+}
+
+.bar-stub {
+  width: 0px;
+  max-width: 100px;
+  background-color: lightseagreen;
+  border-radius: 10px;
+
 }
