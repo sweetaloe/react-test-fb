@@ -1,11 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-// import { getAuth } from "firebase/auth"
+import { getDatabase } from "firebase/database";
+import { getAuth } from "firebase/auth"
 
 
 const firebaseConfig = {
     apiKey: "AIzaSyBtBpJ66aEy_RPYITJfSB5a1NJHFdjPVYY",
     authDomain: "zhv-test-project.firebaseapp.com",
+    databaseURL: "https://zhv-test-project-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "zhv-test-project",
     storageBucket: "zhv-test-project.appspot.com",
     messagingSenderId: "253347007588",
@@ -16,7 +17,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-//чел из интернетов сделал заранее прикол с авторизацией, не знаю нужен ли он вам. если сами не разберётесь можете чиркануть
-// export const auth = getAuth();
-
-export default getFirestore(app);
+export const auth = getAuth(app);
+export const db = getDatabase(app);
+console.log('auth', auth)
+console.log('auth.app', auth.app)
